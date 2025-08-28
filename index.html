@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🌤️Weather Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🌤️ Weather Dashboard</h1>
+      <div class="header-actions">
+        <button id="darkModeToggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name…" aria-label="City name" />
+        <button id="searchBtn" aria-label="Search city">Search</button>
+      </div>
+      <div class="tips">Tip: Try “Cairo”, “London”, “Tokyo”</div>
+    </section>
+
+    <div id="loading" class="loading hidden" aria-live="polite">
+      <div class="spinner"></div>
+      <span>Fetching weather…</span>
+    </div>
+
+    <section>
+      <h2 class="section-title">📊 Results</h2>
+      <div id="weatherContainer" class="grid empty-state-wrap">
+        <div class="empty-state" id="resEmpty">Search for a city or allow location to see your weather.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">🌍 Location</h2>
+      <div id="myLocationContainer" class="grid empty-state-wrap">
+        <div class="empty-state" id="myLocationEmpty">Allow location access to see your local weather.</div>
+      </div>
+    </section>
+    
+    <section>
+      <h2 class="section-title">⭐ Favourites</h2>
+      <div id="favorites" class="grid empty-state-wrap">
+        <div class="empty-state" id="favEmpty">No favorites yet — add some from search results.</div>
+      </div>
+    </section>
+    
+
+  </div>
+
+  <template id="cardTemplate">
+    <div class="weather-card">
+      <div class="card-top">
+        <div class="city-line">
+          <h3 class="city-name">City</h3>
+          <span class="country-code">CC</span>
+        </div>
+        <div class="temp-now">--°C</div>
+        <div class="desc-row">
+          <img class="icon-now" alt="weather icon" />
+          <span class="desc-text">—</span>
+        </div>
+        <div class="meta">
+          <span class="feels-like">Feels like —°C</span>
+          <span class="humidity">Humidity —%</span>
+          <span class="wind">Wind — m/s</span>
+        </div>
+      </div>
+
+      <div class="card-mid">
+        <h4>3-Day Forecast</h4>
+        <div class="forecast"></div>
+      </div>
+
+      <div class="card-actions">
+        <button class="favorite-btn">⭐ Add to Favorites</button>
+        <button class="remove-fav-btn hidden">✖ Remove</button>
+      </div>
+    </div>
+  </template>
+<footer>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4>🌤️ Weather Dashboard</h4>
+      <p>Get accurate forecasts and track your favorite cities.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Favorites</a></li>
+        <li><a href="#">My Location</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="GitHub">💻</a>
+        <a href="#" aria-label="LinkedIn">🔗</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Weather Dashboard. All rights reserved.</p>
+  </div>
+</footer>
+<div id="toastContainer" class="toast-container"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
