@@ -196,7 +196,7 @@ async function searchCity(city) {
     const card = renderCard({ current, forecast, isFavorite: false });
     weatherContainer.prepend(card);
   } catch (e) {
-    showToast("❌ City not found or API error.");
+    showToast("❌ City not found.");
   } finally {
     hide(loadingDiv);
     setEmptyStates();
