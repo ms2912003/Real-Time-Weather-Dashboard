@@ -12,7 +12,8 @@ The goal is to create a **real-time weather dashboard** that fetches and display
 - 📅 3-day forecast with real-time updates  
 - 📍 Auto-detect user location and fetch local weather  
 - 🔄 Loading state indicator for API calls  
-- 🎨 Clean and minimal responsive UI  
+- 🎨 Clean and minimal responsive UI
+- 🌙 Switch between Light & Dark Mode for a better user experience  
 
 ---
 
