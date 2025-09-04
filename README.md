@@ -1,6 +1,6 @@
 # 🌤️ Real-Time Weather Dashboard
 
-This project was built as part of my **Elevvo Internship (Task 7)**.  
+This project was built as part of my **Elevvo Front-End Web Development Internship (Task 7)**.  
 The goal is to create a **real-time weather dashboard** that fetches and displays weather information for multiple cities using the **OpenWeatherMap API**.  
 
 ---
